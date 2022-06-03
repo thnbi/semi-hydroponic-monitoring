@@ -1,3 +1,4 @@
-<h1>Semi Hydroponic Strawberry Cultive Monitoring System</h1>
-<pre>Soilless cultivation of strawberry is in expansion in Brazil due 
-to factors like the reduction of phytosanitary problems and</pre>
+# Semi Hydroponic Strawberry Cultive Monitoring System
+
+Soilless cultivation of strawberry is in expansion in Brazil due to factors like reduction of soil degradation and phytosanitary problems. The biggest disadvantage of these system is the lack of solutions technological low coust capable of helping in monitoring and control the production.
+
