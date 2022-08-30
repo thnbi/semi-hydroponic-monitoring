@@ -1,7 +1,7 @@
 #include <ArduinoWebsockets.h> //biblioteca web sockets
 #include <heltec.h>            //biblioteca heltec
 #include <WiFi.h>              //biblioteca wifi
-#include <DHT.h>
+#include <DHT.h>               //biblioteca sensor dht
 
 const char *ssid = "";                        // ssi
 const char *password = "";                    // senha
@@ -65,13 +65,14 @@ void setupWiFi()
   { // se conecta
     Heltec.display->clear();
     Heltec.display->drawString(0, 10, "WiFi conectada");
+    Heltec.display->drawString(0, 20, ssid)
     Heltec.display->display();
 
     Serial.println("WiFi connected");
     Serial.println("IP address: ");
     Serial.println(WiFi.localIP());
 
-    delay(100);
+    delay(1000);
   }
   else
   {
@@ -152,6 +153,12 @@ void setup()
 {
 
   Serial.begin(9600);
+
+  while (!Serial)
+  {
+    ; // espera conectar a porta serial.
+  }
+
   Heltec.begin(displayEstado, loraEstado, serialEstado, PABOOSTEstado, bandaDeTransmicao);
   Heltec.display->init();
 
